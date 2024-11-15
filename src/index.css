@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Menambahkan Scrollbar Kustom */
+@layer components {
+    .scroll-smooth {
+        scroll-behavior: smooth; /* Mengaktifkan smooth scrolling */
+    }
+
+    .scrollbar-[2px] {
+        ::-webkit-scrollbar {
+            width: 2px; /* Mengatur lebar scrollbar menjadi 2px */
+        }
+    }
+
+    .scrollbar-track-white {
+        ::-webkit-scrollbar-track {
+            background-color: white; /* Mengatur warna track menjadi putih */
+        }
+    }
+
+    .scrollbar-thumb-gray {
+        ::-webkit-scrollbar-thumb {
+            background-color: gray; /* Mengatur warna thumb menjadi abu-abu */
+            border-radius: 9999px; /* Membuat thumb menjadi rounded */
+        }
+    }
+}
+
+@layer base {
+    * {
+        @apply box-border;
+    }
+}
